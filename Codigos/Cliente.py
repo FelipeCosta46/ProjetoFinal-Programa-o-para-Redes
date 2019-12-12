@@ -4,29 +4,22 @@ import os
 import json
 import random
 
-"""
-Converte o conteúdo do arquivo para JSON.
-"""
-def parser(arquivo):
+
+def converter(arquivo):
 	with open(arquivo) as f:
 		dados = json.load(f)
 
 	return dados
 
-"""
-Salva o conteúdo da resposta em um arquivo.
-"""
-def salvar_resposta(texto):
+
+def salvar(texto):
 	nome = "arquivos_json/" + str(random.getrandbits(32)) + ".json"
 	f = open(nome, "a")
 	f.writelines(texto)
 
 	return nome
 
-"""
-Verifica se a resposta contém algum conteúdo.
-"""
-def verificar_dados(texto):
+def verificar(texto):
 	try:
 		if int(texto) == 404:
 		    os.system("cls" if os.name == "nt" else "clear")
@@ -37,7 +30,7 @@ def verificar_dados(texto):
 
 if not os.path.exists("arquivos_json"):
 	os.makedirs("arquivos_json")
-ip_servidor = "http://10.25.3.133:5000/"
+ip_servidor = "IP_MÁQUINA"
 
 try:
 	r = requests.get(ip_servidor)
@@ -64,52 +57,52 @@ while (True):
 
 	if opcao == 1:
 	    r = requests.get("{}api/selecionar/False/True/False/{}/{}".format(ip_servidor, inicio, fim))
-	    if not verificar_dados(r.text):
+	    if not verificar(r.text):
 	        continue
 
 	    print("\033[92m[+]\033[0m Dados obtidos!")
-	    arquivo = salvar_resposta(r.text)
+	    arquivo = salvar(r.text)
 	    print("\033[92m[+]\033[0m Arquivo salvo em: \033[94m{}\033[0m".format(arquivo))
-	    dados = parser(arquivo)
+	    dados = converter(arquivo)
 	    print("\033[92m[+]\033[0m Lendo dados do arquivo...")
 
 	    print("\n\t=== Informações do sensor de temperatura === \n")
 	    print("Valor de temperatúra médio: \t\t\033[92m{}°\033[0m\n".format(dados[-1]))
 	elif opcao == 2:
 		r = requests.get("{}api/selecionar/True/False/False/{}/{}".format(ip_servidor, inicio, fim))
-		if not verificar_dados(r.text):
+		if not verificar(r.text):
 		    continue
 
 		print("\033[92m[+]\033[0m Dados obtidos!")
-		arquivo = salvar_resposta(r.text)
+		arquivo = salvar(r.text)
 		print("\033[92m[+]\033[0m Arquivo salvo em: \033[94m{}\033[0m".format(arquivo))
-		dados = parser(arquivo)
+		dados = converter(arquivo)
 		print("\033[92m[+]\033[0m Lendo dados do arquivo...")
 
 		print("\n\t=== Informações do sensor de humidade === \n")
 		print("Valor de humidade médio: \t\t\033[92m{}\033[0m\n".format(dados[-1]))
 	elif opcao == 3:
 		r = requests.get("{}api/selecionar/False/False/True/{}/{}".format(ip_servidor, inicio, fim))
-		if not verificar_dados(r.text):
+		if not verificar(r.text):
 		    continue
 
 		print("\033[92m[+]\033[0m Dados obtidos!")
-		arquivo = salvar_resposta(r.text)
+		arquivo = salvar(r.text)
 		print("\033[92m[+]\033[0m Arquivo salvo em: \033[94m{}\033[0m".format(arquivo))
-		dados = parser(arquivo)
+		dados = converter(arquivo)
 		print("\033[92m[+]\033[0m Lendo dados do arquivo...")
 
 		print("\n\t=== Informações do sensor de gás === \n")
 		print("Valor de gás médio: \t\t\033[92m{}\033[0m\n".format(dados[-1]))
 	else:
 		r = requests.get("{}api/selecionar/True/True/True/{}/{}".format(ip_servidor, inicio, fim))
-		if not verificar_dados(r.text):
+		if not verificar(r.text):
 		    continue
 
 		print("\033[92m[+]\033[0m Dados obtidos!")
-		arquivo = salvar_resposta(r.text)
+		arquivo = salvar(r.text)
 		print("\033[92m[+]\033[0m Arquivo salvo em: \033[94m{}\033[0m".format(arquivo))
-		dados = parser(arquivo)
+		dados = converter(arquivo)
 		print("\033[92m[+]\033[0m Lendo dados do arquivo...")
 
 		print("\n\t=== Informações dos sensores === \n")
