@@ -11,22 +11,22 @@ Alunos: Felipe da Silva Costa e Guilherme Souza Anizio
 Utilizando a linguagem Python em conjunto com a plataforma Arduino, o projeto tem como objetivo a obtenção de dados de dois sensores (DHT11 e MQ2);
 bem como seu armazenamento em um banco de dados e suas visualizações.
 
-#Primeiro instale o git em sua máquina: ```sudo apt install git```
+#Primeiro instale o git em sua máquina: ```sudo apt install git```.
 
 #Em seguida clone este repositório ```***``` e entre nele.
 
 # Configurando o ambiente:
-  #Instale o Python e pip3: ```sudo apt install python3 python3-pip```
+  #Instale o Python e pip3: ```sudo apt install python3 python3-pip```.
   
   #Instale as dependências para o Python: ```sudo pip3 install -r requirements.txt ```
   
-  #Substitua a variável ```ip_servidor``` dos arquivos [APP.py](Codigos/APP.py), [Arduino.py](Codigos/Arduino.py) e [Cliente.py](Codigos/Cliente.py) para o respectivo IP das máquinas
+  #Substitua a variável ```ip_servidor``` dos arquivos [APP.py](Codigos/APP.py), [Arduino.py](Codigos/Arduino.py) e [Cliente.py](Codigos/Cliente.py) para o respectivo IP das máquinas.
   
   #Faça o upload do arquivo [CodigoArduino.ino](Arduino/CodigoArduino.ino) para o seu Arduino.
 
 # Execução
 
-  #Execute o arquivo [APP.py](Codigos/APP.py) no servidor;
+  #Execute o arquivo [APP.py](Codigos/APP.py) no servidor.
   
   #Execute os arquivos [Arduino.py](Codigos/Arduino.py) e [Cliente.py](Codigos/Cliente.py) na máquina cliente.
 
