@@ -29,6 +29,6 @@ bem como seu armazenamento em um banco de dados e suas visualizações.
   #Execute os arquivos [Arduino.py](Codigos/Arduino.py) e [Cliente.py](Codigos/Cliente.py) na máquina cliente.
 
 
-  O codigo [Arduino.py](Codigo/Arduino.py) receberá os dados enviados do Arduino para a porta serial e enviá-los ao servidor;
-  O codigo [Cliente.py](Codigo/Cliente.py) faz requisições ao servidor em busca dos dados definidos em tempo real pelo cliente;
-  Após os dados serem obtidos, o codigo [Cliente.py](Codigos/Cliente.py) salva em um arquivo no formato JSON e exibe a média     dos mesmos para o usuário. O usuário tem quatro opções de consulta: temperatura, humidade, gás e todas as anteriores.
+  1) O codigo [Arduino.py](Codigo/Arduino.py) receberá os dados enviados do Arduino para a porta serial e enviá-los ao servidor;
+  2) O codigo [Cliente.py](Codigo/Cliente.py) faz requisições ao servidor em busca dos dados definidos em tempo real pelo cliente;
+  3) Após os dados serem obtidos, o codigo [Cliente.py](Codigos/Cliente.py) salva em um arquivo no formato JSON e exibe a média     dos mesmos para o usuário. O usuário tem quatro opções de consulta: temperatura, humidade, gás e todas as anteriores.
