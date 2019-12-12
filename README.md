@@ -24,8 +24,9 @@ bem como seu armazenamento em um banco de dados e suas visualizações.
 
 # Execução
 
-  Execute o arquivo [APP.py](Codigos/APP.py) no servidor;
-  Execute os arquivos [Arduino.py](Codigos/Arduino.py) e [Cliente.py](Codigos/Cliente.py) na máquina cliente.
+  #Execute o arquivo [APP.py](Codigos/APP.py) no servidor;
+  
+  #Execute os arquivos [Arduino.py](Codigos/Arduino.py) e [Cliente.py](Codigos/Cliente.py) na máquina cliente.
 
 
   O codigo [Arduino.py](Codigo/Arduino.py) receberá os dados enviados do Arduino para a porta serial e enviá-los ao servidor;
