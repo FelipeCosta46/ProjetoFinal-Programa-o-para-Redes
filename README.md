@@ -1,7 +1,9 @@
 # Projeto final da disciplina de Programação para Redes
 
 Professor: Charles Cesar Magno de Freitas
+
 Turma: Programação para Redes - 2019.2;
+
 Alunos: Felipe da Silva Costa e Guilherme Souza Anizio
 
 # Objetivo
