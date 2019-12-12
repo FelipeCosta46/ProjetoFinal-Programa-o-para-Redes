@@ -9,8 +9,9 @@ Alunos: Felipe da Silva Costa e Guilherme Souza Anizio
 Utilizando a linguagem Python em conjunto com a plataforma Arduino, o projeto tem como objetivo a obtenção de dados de dois sensores (DHT11 e MQ2);
 bem como seu armazenamento em um banco de dados e suas visualizações.
 
-Primeiro instale o git sem sua máquina: ```sudo apt install git```
-Em seguida clone este repositório ```***``` e entre nele.
+#Primeiro instale o git em sua máquina: ```sudo apt install git```
+
+#Em seguida clone este repositório ```***``` e entre nele.
 
 # Configurando o ambiente:
   Instale o Python e pip3: ```sudo apt install python3 python3-pip```
@@ -26,4 +27,4 @@ Em seguida clone este repositório ```***``` e entre nele.
 
   O codigo [Arduino.py](Codigo/Arduino.py) receberá os dados enviados do Arduino para a porta serial e enviá-los ao servidor;
   O codigo [Cliente.py](Codigo/Cliente.py) faz requisições ao servidor em busca dos dados definidos em tempo real pelo cliente;
-  Após os dados serem obtidos, o codigo [Cliente.py](Codigos/Cliente.py) salva em um arquivo no formato JSON e exibe a média dos mesmos para o usuário. O usuário tem quatro opções de consulta: temperatura, humidade, gás e todas as anteriores.
+  Após os dados serem obtidos, o codigo [Cliente.py](Codigos/Cliente.py) salva em um arquivo no formato JSON e exibe a média     dos mesmos para o usuário. O usuário tem quatro opções de consulta: temperatura, humidade, gás e todas as anteriores.
