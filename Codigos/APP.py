@@ -11,37 +11,23 @@ api = Api(app, version = "1.0", title = "Trabalho",
 ns = api.namespace("api", description = "Operacoes")
 banco = BancoDeDados()
 
-"""
-Função para inserção da humidade no banco de dados.
-Retorna um código 200 para informar ao usuário da ação bem sucedida.
-"""
-@ns.route("/inserir_humidade/<valor>")
-class InserirHumidade(Resource):
-    def post(self, valor):
-        return banco.inserir_humidade(valor)
 
-"""
-Função para inserção da temperatura no banco de dados.
-Retorna um código 200 para informar ao usuário da ação bem sucedida.
-"""
+@ns.route("/ins_gas/<valor>")
+class InsGas(Resource):
+    def post(self, valor):
+        return banco.ins_gas(valor)
+
+@ns.route("/ins_humidade/<valor>")
+class InsHumidade(Resource):
+    def post(self, valor):
+        return banco.ins_humidade(valor)
+
 @ns.route("/inserir_temperatura/<valor>", methods = ["POST"])
-class InserirTemperatura(Resource):
+class InsTemperatura(Resource):
     def post(self, valor):
-        return banco.inserir_temperatura(valor)
+        return banco.ins_temperatura(valor)
 
-"""
-Função para inserção do gás no banco de dados.
-Retorna um código 200 para informar ao usuário da ação bem sucedida.
-"""
-@ns.route("/inserir_gas/<valor>")
-class InserirGas(Resource):
-    def post(self, valor):
-        return banco.inserir_gas(valor)
 
-"""
-Recebe parâmetros e retorna os dados em formato JSON baseado nos mesmos.
-Retornos: dados e média(s).
-"""
 @ns.route("/selecionar/<humidade>/<temperatura>/<gas>/<de>/<ate>")
 class Selecionar(Resource):
     def get(self, humidade, temperatura, gas, de, ate):
@@ -96,8 +82,5 @@ class Selecionar(Resource):
 
         return jsonify(dados)
 
-"""
-Método principal para iniciar o programa.
-"""
 if __name__ == "__main__":
-    app.run("10.25.3.133", debug = True)
+    app.run("IP_MÁQUINA", debug = True)
