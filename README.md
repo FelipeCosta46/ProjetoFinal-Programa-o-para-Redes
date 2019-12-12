@@ -15,8 +15,11 @@ bem como seu armazenamento em um banco de dados e suas visualizações.
 
 # Configurando o ambiente:
   #Instale o Python e pip3: ```sudo apt install python3 python3-pip```
+  
   #Instale as dependências para o Python: ```sudo pip3 install -r requirements.txt ```
+  
   #Substitua a variável ```ip_servidor``` dos arquivos [APP.py](Codigos/APP.py), [Arduino.py](Codigos/Arduino.py) e [Cliente.py]   (Codigos/Cliente.py) para o respectivo IP das máquinas
+  
   #Faça o upload do arquivo [CodigoArduino.ino](Arduino/CodigoArduino.ino) para o seu Arduino.
 
 # Execução
